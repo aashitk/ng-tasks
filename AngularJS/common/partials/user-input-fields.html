@@ -1,0 +1,28 @@
+<form name="userForm" class="form-content">
+    <table class="center">
+        <tr>
+            <th>
+                <p class="left-text">Attribute name</p>
+            </th>
+            <th>
+                <p class="left-text">Attribute values (comma separated)</p>
+            </th>
+        </tr>
+        <tr ng-repeat="data in userFormData">
+            <td>
+                <input class="left-text grey-text rounded-border" type="text" ng-model="userFormData[$index].txtAttributeName" />
+            </td>
+            <td>
+                <input class="left-text grey-text rounded-border" type="text" ng-model="userFormData[$index].txtAttributeValue" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="dark-grey-text rounded-border" ng-click="addFields();">Add Attributes</button>
+            </td>
+            <td>
+                <button class="dark-grey-text rounded-border" ng-click="validate();">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>

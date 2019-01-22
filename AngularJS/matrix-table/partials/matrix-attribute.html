@@ -1,0 +1,21 @@
+<div class="matrix-attr">
+    <div class="matrix-variate" ng-if="matrixObject.variation.length > 0" ng-repeat="variate in matrixObject.variation">
+        <p class="attr-name grey-text" ng-bind="matrixObject.name"></p>
+        <div ng-class="{'pos-relative': variate.variation === undefined 
+                || variate.variation === null || variate.variation.length <= 0}">
+            <div class="display-inline-block matrix-container attr-value grey-text rounded-border"
+                ng-class="{'val-name': variate.variation && variate.variation.length > 0}"
+                ng-bind="variate.name">
+            </div>
+            <div ng-if="variate.variation && variate.variation.length > 0">
+                <mat-attribute ng-repeat="matVariate in variate.variation" 
+                    ng-init="matrixObject = matVariate"></mat-attribute>
+            </div>
+            <div class="display-inline-block attr-value-container" ng-if="variate.variation === undefined || variate.variation === null 
+                || variate.variation.length <= 0">
+                <input type="text" class="attr-value grey-text rounded-border" ng-model="variate.cost" />
+                <input type="text" class="attr-value grey-text rounded-border" ng-model="variate.stock" />
+            </div>
+        </div>
+    </div>
+</div>

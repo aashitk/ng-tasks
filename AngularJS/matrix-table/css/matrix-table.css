@@ -1,0 +1,71 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.matrix-table {
+    display: table;
+    position: relative;
+}
+.matrix-center {
+    left: calc(-50% - 2rem);
+}
+.display-inline-block {
+    display: inline-block;
+}
+.matrix-container {
+    position: relative;
+    right: 0;
+}
+.matrix-container.empty {
+    width: 10rem;
+}
+.matrix-attr, .var-header {
+    padding-left: 8px;
+}
+.matrix-variate {
+    padding-top: 5px;
+}
+.matrix-attr .attr-name {
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+.matrix-table .var-header, .matrix-table .attr-value-header {
+    color: #666;
+    font-weight: bold;
+}
+.matrix-attr .attr-value, .matrix-table .attr-value-header {
+    width: 5rem;
+}
+.matrix-attr div.attr-value {
+    display: table;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+.matrix-attr .attr-value, .matrix-table .attr-value-header, .matrix-table .var-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.65rem;
+}
+.matrix-attr .attr-value.val-name, .matrix-table .var-header, .matrix-table .btn-generate {
+    width: 100%;
+
+}
+.attr-value-container, .btn-generate > button {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 3px);
+}
+.btn-generate > button {
+    margin: 5px 0 5px 8px;
+    width: 5rem;
+}
+.attr-value-container {
+    width: 11.5rem;
+}
+.attr-value-container .attr-value, .attr-value-container .attr-value-header {
+    margin-left: 8px;
+}
+.pos-relative {
+    position: relative;
+}
